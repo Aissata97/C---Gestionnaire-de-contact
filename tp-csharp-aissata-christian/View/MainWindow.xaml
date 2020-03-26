@@ -1,0 +1,29 @@
+﻿<Window x:Class="View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:View"
+        mc:Ignorable="d"
+        Title="Gestionnaire de contact" Height="600" Width="800" ResizeMode="NoResize">
+    <Grid Background="BlueViolet">
+        <TextBlock 
+            VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="60" FontFamily="Times New Roman" >
+            Gestionnaire de contact
+        </TextBlock>
+        <Button x:Name="button" Content="Ajouter un contact" HorizontalAlignment="Left" Margin="20,116,0,0" VerticalAlignment="Top" Width="191" Height="37"  FontSize="20" 
+                 FontFamily="Times New Roman" Click="BtnFormulaireContact" />
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="793">
+
+        </Border>
+        <Label x:Name="label" Content="Trier par :" HorizontalAlignment="Left" Margin="257,120,0,0" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.395,1.254" Height="42" FontSize="22" FontFamily="Times New Roman"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="366,120,0,0" VerticalAlignment="Top" Width="131" Height="37" Background="CadetBlue"  FontFamily="Times New Roman" FontSize="20">
+            <ComboBoxItem Content="Date d'ajout" IsSelected="True" VerticalAlignment="Center" />
+            <ComboBoxItem Content="Ordre alphabétique" VerticalAlignment="Center" />
+        </ComboBox>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="30" Margin="93,196,0,0" TextWrapping="Wrap" Text="Mes contacts" VerticalAlignment="Top" Width="588" FontFamily="Times New Roman" FontSize="25" TextAlignment="Center" RenderTransformOrigin="0.457,0.089"/>
+        <TextBox x:Name="textBox" ToolTip="Tapez le nom du contact à rechercher" HorizontalAlignment="Left" Height="33" Margin="540,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" RenderTransformOrigin="1.008,0.567" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="button1" Content="Recherche" HorizontalAlignment="Left" Height="33" Margin="681,120,0,0" VerticalAlignment="Top" Width="83" FontSize="15" FontFamily="Times New Roman"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="305" Margin="76,226,0,0" VerticalAlignment="Top" Width="635"/>
+    </Grid>
+</Window>
