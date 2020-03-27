@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using Model;
 
 namespace View
 {
@@ -16,7 +14,10 @@ namespace View
         public MainWindow()
         {
             InitializeComponent();
-            DAL.Service.LireLigne();
+            //DAL.Service.LireLigne();
+            AjouterItemListbox();
+
+
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -27,7 +28,17 @@ namespace View
         private void BtnFormulaireContact(object sender, RoutedEventArgs e)
         {
             new formulaire().Show();
+            DAL.Service.LireData();
             this.Close();
+        }
+
+        public void AjouterItemListbox()
+        {
+            List<ContactEntities> listContact = DAL.Service.LireData();
+            foreach (ContactEntities contact in listContact)
+            {
+                listBox.Items.Add(contact.Prenom + " " + contact.Nom + " " + contact.Email + " " + contact.Tel + " " + contact.Addresse);
+            }
         }
     }
 }

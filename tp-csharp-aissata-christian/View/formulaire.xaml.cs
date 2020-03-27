@@ -15,6 +15,7 @@ namespace View
         public formulaire()
         {
             InitializeComponent();
+            
         }
 
         private void BtnAnnuler(object sender, RoutedEventArgs e)
@@ -35,10 +36,6 @@ namespace View
             {
                 BLL.ContactManager.AjouterContact(new ContactEntities(txtboxNom.Text, txtboxPrenom.Text, txtboxEmail.Text, int.Parse(txtboxTelephone.Text), txtboxAddresse.Text));
                 MainWindow mainWindow = new MainWindow();
-                foreach(ContactEntities contacts in listContact)
-                {
-                    mainWindow.listBox.Items.Add(contacts.Prenom + " " + contacts.Nom + " " + contacts.Tel + " " + contacts.Email + " " + contacts.Addresse);
-                }
                 mainWindow.Show();
                 Close();
                 
