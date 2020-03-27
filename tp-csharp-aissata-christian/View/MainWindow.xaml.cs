@@ -14,10 +14,7 @@ namespace View
         public MainWindow()
         {
             InitializeComponent();
-            //DAL.Service.LireLigne();
             AjouterItemListbox();
-
-
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -39,6 +36,18 @@ namespace View
             {
                 listBox.Items.Add(contact.Prenom + " " + contact.Nom + " " + contact.Email + " " + contact.Tel + " " + contact.Addresse);
             }
+        }
+
+        private void Button3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnSupprimer_Click(object sender, RoutedEventArgs e)
+        {
+            //string text = listBox.Items.Con;
+            listBox.Items.RemoveAt(listBox.SelectedIndex);
+            //BLL.ContactManager.SupprimerContact(listBox.SelectedIndex);
         }
     }
 }

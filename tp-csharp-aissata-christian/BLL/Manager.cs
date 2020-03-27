@@ -20,7 +20,18 @@ namespace BLL
         }
         public static void SupprimerContact(ContactEntities contact)
         {
-            //ListContacts.Remove(contact);
+            listContacts.Remove(contact);
+            /*int compteur = 0;
+            bool trouver = false;
+            while (!trouver & compteur < listContacts.Count)
+            {
+                if (listContacts[compteur].Id == id)
+                {
+                    listContacts.RemoveAt(compteur);
+                    trouver = true;
+                }
+                compteur++;
+            }*/
         }
 
     }

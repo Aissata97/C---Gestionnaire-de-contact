@@ -15,7 +15,7 @@ namespace DAL
             File.ReadAllLines(path);
         }
 
-        public static List<ContactEntities> LireLigne()
+        public static List<ContactEntities> LireData()
         {
             List<ContactEntities> contacts = new List<ContactEntities>();
             string[] lignes = File.ReadAllLines(path);
@@ -28,12 +28,13 @@ namespace DAL
             return contacts;
         }
 
+        //Sauvegarde le contact dans le fichier texte
         public static void AjouterLigne(List<ContactEntities> listContacts)
         {
             foreach (ContactEntities contact in listContacts)
             {
-                string ligne = contact.Nom + '/' + contact.Prenom + '/' + contact.Email + '/' + contact.Tel + '/' + contact.Addresse;
-                File.WriteAllText(path, ligne);
+                string ligne = contact.Nom + '/' + contact.Prenom + '/' + contact.Email + '/' + contact.Tel + '/' + contact.Addresse + '\n';
+                File.AppendAllText(path, ligne);
             }
         }
     }
