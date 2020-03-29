@@ -1,7 +1,4 @@
-Merveille/Alice/Alice@merveille.com/53678/Aux pays des merveilles
-fatim/camara/fat/123/123 fat
-binet/mariam/bb@mm/789/56 boulevard binet
-Merveille/Alice/Alice@merveille.com/53678/Aux pays des merveilles
-binet/mariam/bb@mm/789/56 boulevard binet
-test/testeuse/ghj/789/hdf
-fatim/camara/kk/87/kk
+Merveille/Alice/alice@gmail.com/98/Aux pays des merveilles
+tata/toto/toto@toto.com/890356/addresse de totot
+Aissata/Ouattara/aissata@aissata.com/12345/90 rue de Aissata
+hahahah/hahaahhah/hahahah@haha.comm/98765/ville hahaha

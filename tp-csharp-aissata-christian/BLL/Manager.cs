@@ -26,5 +26,66 @@ namespace BLL
             DAL.Service.MiseAjourFichier(ligneASupprimer);
         }
 
+
+        public static void ModifierContact(ContactEntities ancienContact, ContactEntities contactModifie)
+        {
+            SupprimerContact(ancienContact);
+            AjouterContact(contactModifie);
+        }
+
+
+        public List<ContactEntities> RechercheContact(string value, string info)
+        {
+            List<ContactEntities> resultRecherche = new List<ContactEntities>();
+
+            switch (value)
+            {
+                case "Nom":
+                    foreach (ContactEntities contact in listContacts)
+                    {
+
+                        if (contact.Nom.Contains(info))
+                        {
+                            resultRecherche.Add(contact);
+                        }
+                    }
+                    break;
+
+                case "Prenom":
+                    foreach (ContactEntities contact in listContacts)
+                    {
+
+                        if (contact.Nom.Contains(info))
+                        {
+                            resultRecherche.Add(contact);
+                        }
+                    }
+                    break;
+                case "Addresse":
+                    foreach (ContactEntities contact in listContacts)
+                    {
+
+                        if (contact.Addresse.Contains(info))
+                        {
+                            resultRecherche.Add(contact);
+                        }
+                    }
+                    break;
+                case "Telephone":
+                    foreach (ContactEntities contact in listContacts)
+                    {
+
+                        if (contact.Tel.ToString().Contains(info))
+                        {
+                            resultRecherche.Add(contact);
+                        }
+                    }
+                    break;
+            }
+
+
+            return resultRecherche;
+        }
+
     }
 }

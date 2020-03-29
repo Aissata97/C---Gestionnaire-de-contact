@@ -25,7 +25,7 @@
         <TextBox x:Name="textBox" ToolTip="Tapez le nom du contact à rechercher" HorizontalAlignment="Left" Height="33" Margin="561,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" RenderTransformOrigin="1.008,0.567"/>
         <Button x:Name="btnRecherche" Content="Recherche" HorizontalAlignment="Left" Height="33" Margin="702,120,0,0" VerticalAlignment="Top" Width="83" FontSize="15" FontFamily="Times New Roman"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="305" Margin="76,226,0,0" VerticalAlignment="Top" Width="635"/>
-        <Button x:Name="btnModifier" Content="Modifier" HorizontalAlignment="Left" Height="39" Margin="96,113,0,0" VerticalAlignment="Top" Width="80" FontSize="20" FontFamily="Times New Roman" RenderTransformOrigin="0.023,0.594"/>
+        <Button x:Name="btnModifier" Content="Modifier" HorizontalAlignment="Left" Height="39" Margin="96,113,0,0" VerticalAlignment="Top" Width="80" FontSize="20" FontFamily="Times New Roman" RenderTransformOrigin="0.023,0.594" Click="BtnModifier_Click"/>
         <Button x:Name="btnSupprimer" Content="Supprimer" HorizontalAlignment="Left" Height="39" Margin="181,113,0,0" VerticalAlignment="Top" Width="96" FontSize="20" FontFamily="Times New Roman" Click="BtnSupprimer_Click"/>
     </Grid>
 </Window>

@@ -30,7 +30,7 @@ namespace View
 
             if (txtboxNom.Text == "" | txtboxPrenom.Text == "")
             {
-                lblErreur.Content = " Attention, le nom et le prénom ne peuvent pas etre vide !!";
+                lblErreur.Content = " Attention, le champ nom et le prénom ne peuvent pas etre vide !!";
             }
             else
             {

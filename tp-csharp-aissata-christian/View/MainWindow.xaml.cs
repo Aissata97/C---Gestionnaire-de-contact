@@ -11,6 +11,7 @@ namespace View
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static ContactEntities contactSelectionne { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace View
             this.Close();
         }
 
-        private void AjouterItemListbox()
+        public void AjouterItemListbox()
         {
             List<ContactEntities> listContact = DAL.Service.LireData();
             foreach (ContactEntities contact in listContact)
@@ -44,6 +45,21 @@ namespace View
         private void BtnSupprimer_Click(object sender, RoutedEventArgs e)
         {
             SupprimerItemListox((ContactEntities)listBox.SelectedItem);
+        }
+
+        //Ouvre le formulaire permettant de faire la modification
+        private void BtnModifier_Click(object sender, RoutedEventArgs e)
+        {
+            contactSelectionne = (ContactEntities)listBox.SelectedItem;
+            FormulaireModifier formulaire = new FormulaireModifier();
+            formulaire.txtboxNom.Text = contactSelectionne.Nom;
+            formulaire.txtboxPrenom.Text = contactSelectionne.Prenom;
+            formulaire.txtboxAddresse.Text = contactSelectionne.Addresse;
+            formulaire.txtboxTelephone.Text = contactSelectionne.Tel.ToString();
+            formulaire.txtboxEmail.Text = contactSelectionne.Email;
+
+            formulaire.Show();
+            Close();
         }
 
     }
