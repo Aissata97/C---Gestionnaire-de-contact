@@ -15,7 +15,7 @@ namespace View
         public formulaire()
         {
             InitializeComponent();
-            
+
         }
 
         private void BtnAnnuler(object sender, RoutedEventArgs e)
@@ -28,7 +28,7 @@ namespace View
         {
             List<ContactEntities> listContact = BLL.ContactManager.GetContacts();
 
-            if ( txtboxNom.Text == "" | txtboxPrenom.Text == "" )
+            if (txtboxNom.Text == "" | txtboxPrenom.Text == "")
             {
                 lblErreur.Content = " Attention, le nom et le prénom ne peuvent pas etre vide !!";
             }
@@ -38,7 +38,7 @@ namespace View
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 Close();
-                
+
             }
         }
     }

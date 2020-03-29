@@ -18,20 +18,12 @@ namespace BLL
         {
             return listContacts;
         }
+
         public static void SupprimerContact(ContactEntities contact)
         {
             listContacts.Remove(contact);
-            /*int compteur = 0;
-            bool trouver = false;
-            while (!trouver & compteur < listContacts.Count)
-            {
-                if (listContacts[compteur].Id == id)
-                {
-                    listContacts.RemoveAt(compteur);
-                    trouver = true;
-                }
-                compteur++;
-            }*/
+            string ligneASupprimer = contact.Nom + '/' + contact.Prenom + '/' + contact.Email + '/' + contact.Tel + '/' + contact.Addresse;
+            DAL.Service.MiseAjourFichier(ligneASupprimer);
         }
 
     }

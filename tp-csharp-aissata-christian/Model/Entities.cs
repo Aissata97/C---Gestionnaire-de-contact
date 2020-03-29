@@ -4,7 +4,6 @@ namespace Model
     public class ContactEntities
     {
         public static int CptId = 0;
-        public int Id { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public string Email { get; set; }
@@ -13,13 +12,17 @@ namespace Model
 
         public ContactEntities(string nom, string prenom, string email, int tel, string addresse)
         {
-            Id = CptId;
             Nom = nom;
             Prenom = prenom;
             Email = email;
             Tel = tel;
             Addresse = addresse;
-            CptId++;
+        }
+
+        //**
+        public override string ToString()
+        {
+            return Prenom + " " + Nom + " " + Email + " " + Tel + " " + Addresse;
         }
 
     }

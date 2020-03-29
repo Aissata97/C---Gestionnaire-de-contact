@@ -37,5 +37,26 @@ namespace DAL
                 File.AppendAllText(path, ligne);
             }
         }
+
+        public static void MiseAjourFichier(string ligne)
+        {
+            string texte = null;
+            string ligneActuelle = null;
+            StreamReader sr = new StreamReader(path);
+            // Ouverture du fichier
+            while (sr.Peek() != -1)
+            {
+                ligneActuelle = sr.ReadLine();
+                if (!(ligneActuelle == ligne))
+                {
+                    texte += ligneActuelle + "\n";
+                }
+            }
+            sr.Close();
+            // Ré-écriture du fichier
+            StreamWriter sr2 = new StreamWriter(path);
+            sr2.Write(texte);
+            sr2.Close();
+        }
     }
 }

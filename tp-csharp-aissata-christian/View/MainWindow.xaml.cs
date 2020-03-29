@@ -17,11 +17,7 @@ namespace View
             AjouterItemListbox();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
+        //Ouvrir le formulaire de contact
         private void BtnFormulaireContact(object sender, RoutedEventArgs e)
         {
             new formulaire().Show();
@@ -29,25 +25,26 @@ namespace View
             this.Close();
         }
 
-        public void AjouterItemListbox()
+        private void AjouterItemListbox()
         {
             List<ContactEntities> listContact = DAL.Service.LireData();
             foreach (ContactEntities contact in listContact)
             {
-                listBox.Items.Add(contact.Prenom + " " + contact.Nom + " " + contact.Email + " " + contact.Tel + " " + contact.Addresse);
+                listBox.Items.Add(contact);
             }
         }
 
-        private void Button3_Click(object sender, RoutedEventArgs e)
+        //**
+        private void SupprimerItemListox(ContactEntities contact)
         {
-
+            listBox.Items.Remove(contact);
+            BLL.ContactManager.SupprimerContact(contact);
         }
 
         private void BtnSupprimer_Click(object sender, RoutedEventArgs e)
         {
-            //string text = listBox.Items.Con;
-            listBox.Items.RemoveAt(listBox.SelectedIndex);
-            //BLL.ContactManager.SupprimerContact(listBox.SelectedIndex);
+            SupprimerItemListox((ContactEntities)listBox.SelectedItem);
         }
+
     }
 }

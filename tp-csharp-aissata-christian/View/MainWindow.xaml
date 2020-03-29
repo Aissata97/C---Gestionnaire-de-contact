@@ -22,7 +22,7 @@
             <ComboBoxItem Content="Ordre alphabétique" VerticalAlignment="Center" />
         </ComboBox>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="30" Margin="93,196,0,0" TextWrapping="Wrap" Text="Mes contacts" VerticalAlignment="Top" Width="588" FontFamily="Times New Roman" FontSize="25" TextAlignment="Center" RenderTransformOrigin="0.457,0.089"/>
-        <TextBox x:Name="textBox" ToolTip="Tapez le nom du contact à rechercher" HorizontalAlignment="Left" Height="33" Margin="561,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" RenderTransformOrigin="1.008,0.567" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="textBox" ToolTip="Tapez le nom du contact à rechercher" HorizontalAlignment="Left" Height="33" Margin="561,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" RenderTransformOrigin="1.008,0.567"/>
         <Button x:Name="btnRecherche" Content="Recherche" HorizontalAlignment="Left" Height="33" Margin="702,120,0,0" VerticalAlignment="Top" Width="83" FontSize="15" FontFamily="Times New Roman"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="305" Margin="76,226,0,0" VerticalAlignment="Top" Width="635"/>
         <Button x:Name="btnModifier" Content="Modifier" HorizontalAlignment="Left" Height="39" Margin="96,113,0,0" VerticalAlignment="Top" Width="80" FontSize="20" FontFamily="Times New Roman" RenderTransformOrigin="0.023,0.594"/>
